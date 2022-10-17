@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ZooAnimalApp/app/src/main/res/drawable/ic_search.xml" value="0.22777777777777777" />
         <entry key="..\:/ZooAnimalApp/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/ZooAnimalApp/app/src/main/res/layout/fragment_saved.xml" value="0.14583333333333334" />
+        <entry key="..\:/ZooAnimalApp/app/src/main/res/layout/fragment_search.xml" value="0.14583333333333334" />
+        <entry key="..\:/ZooAnimalApp/app/src/main/res/layout/fragment_web.xml" value="0.14583333333333334" />
+        <entry key="..\:/ZooAnimalApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>
