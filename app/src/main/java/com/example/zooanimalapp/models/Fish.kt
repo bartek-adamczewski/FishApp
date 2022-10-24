@@ -7,7 +7,6 @@ import com.squareup.moshi.Json
 @Entity(
     tableName = "fishes"
 )
-
 data class Fish(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,

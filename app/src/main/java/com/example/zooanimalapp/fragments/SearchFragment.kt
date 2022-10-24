@@ -29,7 +29,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         setUpRecyclerView()
 
         viewmodel.fishes.observe(viewLifecycleOwner, Observer { response ->
-            when(response){
+            when (response) {
                 is Resource.Success -> {
                     response.data?.let { fishesResponse ->
                         fishAdapter.differ.submitList(fishesResponse)
@@ -40,13 +40,16 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                         Log.e(TAG, "Error : $message")
                     }
                 }
+                is Resource.Loading -> {
+                    TODO("Cover that case.")
+                }
             }
 
         })
 
     }
 
-    private fun setUpRecyclerView(){
+    private fun setUpRecyclerView() {
         fishAdapter = FishAdapter()
         rvFish.apply {
             adapter = fishAdapter
