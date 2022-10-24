@@ -14,18 +14,17 @@ import com.example.zooanimalapp.models.Fish
 )
 
 @TypeConverters(Converters::class)
-
 abstract class FishDatabase : RoomDatabase() {
 
-    abstract suspend fun getFishDao(): FishDao
+    abstract fun fishDao(): FishDao
 
-    companion object{
+    companion object {
         @Volatile
         private var instance: FishDatabase? = null
         private val LOCK = Any()
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK){
-            instance ?: createDatabase(context).also{ instance = it }
+        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
+            instance ?: createDatabase(context).also { instance = it }
         }
 
         private fun createDatabase(context: Context) =
